@@ -1,0 +1,28 @@
+import fetch from 'isomorphic-unfetch'
+
+import ArticleDetail from '../components/ArticleDetail'
+import {API_URI} from '../next.config'
+
+const Article = ({article}) => {
+    return (
+        <div>
+            <ArticleDetail articleImg={article.image}
+                           avatar={'/static/avatar.png'}
+                           articleTitle={article.title}
+                           articleContent={article.content}/>
+            <style jsx>{`
+
+        `}</style>
+        </div>
+    )
+}
+
+Article.getInitialProps = async ({req, query}) => {
+    const res = await fetch(API_URI + '/article/' + query.id)
+    const data = await res.json()
+    return {
+        article: data
+    }
+}
+
+export default Article

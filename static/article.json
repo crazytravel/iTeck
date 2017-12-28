@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "articleImg": "/static/1.png",
+    "articleTitle": "Help Finding Information Online",
+    "articleContent": "Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory compaq laptop battery compaq laptop",
+    "articleDate": "12-27-2017"
+  },
+  {
+    "id": 2,
+    "articleImg": "/static/2.png",
+    "articleTitle": "Help Finding Information Online",
+    "articleContent": "Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory compaq laptop battery compaq laptop",
+    "articleDate": "12-27-2017"
+  },
+  {
+    "id": 3,
+    "articleImg": "/static/3.png",
+    "articleTitle": "Help Finding Information Online",
+    "articleContent": "Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker, projector, hardware and more. laptop accessory compaq laptop battery compaq laptop",
+    "articleDate": "12-27-2017"
+  }
+]

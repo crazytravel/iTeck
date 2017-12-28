@@ -24,4 +24,4 @@ yarn-error.log*
 .next
 out
 
-.yarn.lock
+yarn.lock

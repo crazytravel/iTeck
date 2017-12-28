@@ -1,15 +1,12 @@
-import Link from 'next/link'
 
 const ArticleCell = ({articleImg, articleTitle, articleContent, articleDate}) => (
     <div className="cell-container">
-        <Link href="/"><a>
-            <img className="cell-img" src={articleImg}/>
-            <div className="cell-wrapper">
-                <h3>{articleTitle}</h3>
-                <p>{articleContent}</p>
-                <div className="cell-bottom">{articleDate}</div>
-            </div>
-        </a></Link>
+        <img className="cell-img" src={articleImg}/>
+        <div className="cell-wrapper">
+            <h3>{articleTitle}</h3>
+            <p>{articleContent}</p>
+            <div className="cell-bottom">{articleDate}</div>
+        </div>
         <style jsx>{`
             .cell-container {
                 max-width: 800px;
