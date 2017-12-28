@@ -1,4 +1,3 @@
-Jenkinsfile('Nodejs Pipeline')
 pipeline {
     agent any
 
