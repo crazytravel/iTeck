@@ -1,11 +1,11 @@
 
-const ArticleCell = ({articleImg, articleTitle, articleContent, articleDate}) => (
+const ArticleCell = ({image, title, content, date}) => (
     <div className="cell-container">
-        <img className="cell-img" src={articleImg}/>
+        <img className="cell-img" src={image}/>
         <div className="cell-wrapper">
-            <h3>{articleTitle}</h3>
-            <p>{articleContent}</p>
-            <div className="cell-bottom">{articleDate}</div>
+            <h3>{title}</h3>
+            <p>{content}</p>
+            <div className="cell-bottom">{date}</div>
         </div>
         <style jsx>{`
             .cell-container {

@@ -6,16 +6,16 @@ import MainHeader from '../components/MainHeader'
 import MainFooter from '../components/MainFooter'
 import ArticleCell from '../components/ArticleCell'
 
-const Index = (articles) => (
+const Index = ({articles}) => (
     <div className="page-container">
         <MainHeader/>
         <article>
             {articles.map((article, index) => (
-                <Link href={`/article?id=${article.id}`}>
-                    <a><ArticleCell key={index} articleImg={article.articleImg}
-                                    articleTitle={article.articleTitle}
-                                    articleContent={article.articleContent}
-                                    articleDate={article.articleDate}/></a>
+                <Link key={index} href={`/article?id=${article.id}`}>
+                    <a><ArticleCell image={article.image}
+                                    title={article.title}
+                                    content={article.content}
+                                    date={article.date}/></a>
                 </Link>
             ))}
         </article>
@@ -35,6 +35,7 @@ const Index = (articles) => (
             }
             a {
                 text-decoration: none;
+                color: #000000;
             }
             a:visited {
                 color: inherit;
@@ -44,7 +45,7 @@ const Index = (articles) => (
 )
 
 Index.getInitialProps = async ({req}) => {
-    const res = await fetch(API_URI + 'article')
+    const res = await fetch(API_URI + '/articles')
     const data = await res.json()
     return {
         articles: data

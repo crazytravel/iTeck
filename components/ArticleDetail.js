@@ -12,7 +12,7 @@ const ArticleDetail = ({articleImg, avatar, articleTitle, articleContent}) => (
         <style jsx>{`
             .container {
                 display: flex;
-
+                flex-direction: column;
             }
             .cover-picture {
                 flex: 3;

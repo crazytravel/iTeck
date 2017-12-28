@@ -7,18 +7,18 @@ const Article = ({article}) => {
     return (
         <div>
             <ArticleDetail articleImg={article.image}
-                           avatar={'/static/avatar.png'}
+                           avatar={'/static/avatar.jpg'}
                            articleTitle={article.title}
                            articleContent={article.content}/>
             <style jsx>{`
 
-        `}</style>
+            `}</style>
         </div>
     )
 }
 
 Article.getInitialProps = async ({req, query}) => {
-    const res = await fetch(API_URI + '/article/' + query.id)
+    const res = await fetch(API_URI + '/articles/' + query.id)
     const data = await res.json()
     return {
         article: data

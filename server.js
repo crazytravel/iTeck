@@ -1,6 +1,7 @@
 const Koa = require('koa')
 const next = require('next')
 const Router = require('koa-router')
+require('./server/db')
 
 const Article = require('./server/routes/article')
 
@@ -17,10 +18,8 @@ app.prepare().then(() => {
         ctx.respond = false
     })
 
-    router.get('/article', async ctx => {
-        // await Article.list()
-        ctx.respond = false
-    })
+    router.get('/api/articles', Article.list)
+    router.get('/api/articles/:id', Article.findOne)
 
     router.get('*', async ctx => {
         await handle(ctx.req, ctx.res)
