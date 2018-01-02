@@ -11,7 +11,7 @@ const Index = ({articles}) => (
         <MainHeader/>
         <article>
             {articles.map((article, index) => (
-                <Link key={index} href={`/article?id=${article.id}`}>
+                <Link key={index} as={`/article/${article.id}`} href={`/article?id=${article.id}`}>
                     <a><ArticleCell image={article.image}
                                     title={article.title}
                                     content={article.content}

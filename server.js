@@ -13,8 +13,9 @@ app.prepare().then(() => {
     const server = new Koa()
     const router = new Router()
 
-    router.get('/p/:id', async ctx => {
-        await app.render(ctx.req, ctx.res, '/post', ctx.params)
+    router.get('/article/:id', async ctx => {
+        const actualPage = '/article'
+        await app.render(ctx.req, ctx.res, actualPage, ctx.params)
         ctx.respond = false
     })
 
