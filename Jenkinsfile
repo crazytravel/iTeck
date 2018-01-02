@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'node build'
+                echo 'npm build'
             }
         }
         stage('Test') {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Start') {
             steps {
-                echo 'node start'
+                echo 'npm start'
             }
         }
     }
