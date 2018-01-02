@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pm2 stop iteck'
+                sh 'pm2 stop --silent iteck'
+                sh 'pm2 delete --silent iteck'
                 sh 'npm install'
             }
         }
