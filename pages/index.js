@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
-import {API_URI} from '../next.config'
 import MainHeader from '../components/MainHeader'
 import MainFooter from '../components/MainFooter'
 import ArticleCell from '../components/ArticleCell'
+const API_URL = process.env.API_URL
 
 const Index = ({articles}) => (
     <div>
@@ -24,7 +24,7 @@ const Index = ({articles}) => (
 )
 
 Index.getInitialProps = async ({req}) => {
-    const res = await fetch(API_URI + '/articles')
+    const res = await fetch(API_URL + '/articles')
     const data = await res.json()
     return {
         articles: data

@@ -2,7 +2,8 @@ import fetch from 'isomorphic-unfetch'
 
 import MainHeader from '../components/MainHeader'
 import ArticleDetail from '../components/ArticleDetail'
-import {API_URI} from '../next.config'
+
+const API_URL = process.env.API_URL
 
 const Article = ({article}) => {
     return (
@@ -17,8 +18,9 @@ const Article = ({article}) => {
 }
 
 Article.getInitialProps = async ({req, query}) => {
-    console.log('出现了吗')
-    const res = await fetch(API_URI + '/articles/' + query.id)
+
+    console.log(API_URL)
+    const res = await fetch(API_URL + '/articles/' + query.id)
     const data = await res.json()
     return {
         article: data

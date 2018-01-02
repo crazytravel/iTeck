@@ -27,6 +27,9 @@ app.prepare().then(() => {
         ctx.respond = false
     })
     server.use(async (ctx, next) => {
+        ctx.set('Access-Control-Allow-Origin', "*.iteck.cc")
+        ctx.set('Access-Control-Allow-Credentials', 'true')
+        ctx.set('Access-Control-Allow-Methods', 'GET,HEAD,PUT,POST,DELETE,PATCH')
         ctx.res.statusCode = 200
         await next()
     })

@@ -4,5 +4,4 @@ module.exports = {
             '/': {page: '/'},
         }
     },
-    API_URI: 'https://iteck.cc/api'
 }
