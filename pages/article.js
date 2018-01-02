@@ -20,6 +20,7 @@ const Article = ({article}) => {
 }
 
 Article.getInitialProps = async ({req, query}) => {
+    console.log('出现了吗')
     const res = await fetch(API_URI + '/articles/' + query.id)
     const data = await res.json()
     return {
