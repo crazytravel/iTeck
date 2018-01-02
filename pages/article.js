@@ -12,9 +12,6 @@ const Article = ({article}) => {
                            avatar={'/static/avatar.jpg'}
                            articleTitle={article.title}
                            articleContent={article.content}/>
-            <style jsx>{`
-
-            `}</style>
         </div>
     )
 }

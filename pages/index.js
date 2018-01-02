@@ -7,7 +7,7 @@ import MainFooter from '../components/MainFooter'
 import ArticleCell from '../components/ArticleCell'
 
 const Index = ({articles}) => (
-    <div className="page-container">
+    <div>
         <MainHeader/>
         <article>
             {articles.map((article, index) => (
@@ -20,11 +20,6 @@ const Index = ({articles}) => (
             ))}
         </article>
         <MainFooter/>
-        <style jsx>{`
-            .page-container {
-
-            }
-        `}</style>
     </div>
 )
 
