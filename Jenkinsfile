@@ -4,8 +4,6 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'pm2 stop --silent iteck'
-                sh 'pm2 delete --silent iteck'
                 sh 'npm install'
             }
         }
@@ -21,7 +19,7 @@ pipeline {
         }
         stage('Start') {
             steps {
-                sh 'pm2 start process.config.js --env_production'
+                sh 'pm2 restart process.config.js --env_production'
             }
         }
     }
