@@ -1,47 +1,38 @@
-
 const ArticleDetail = ({articleImg, avatar, articleTitle, articleContent}) => (
     <div className="container">
-        <div className="cover-picture">
-            <img src={articleImg}/>
-            <span>{articleTitle}</span>
-        </div>
-        <div className="content">
+        <div className="header">
+            <h2>{articleTitle}</h2>
             <img src={avatar}/>
-            <p>{articleContent}</p>
         </div>
+        <div className="article-img"><img src={articleImg}/></div>
+        <p>{articleContent}</p>
         <style jsx>{`
             .container {
                 display: flex;
                 flex-direction: column;
-            }
-            .cover-picture {
-                flex: 3;
+                margin: 30px;
+                box-shadow: 10px 10px 50px rgba(0, 0, 0, .1);
+                background-color: #FFFFFF;
+                border-radius: 3px;
                 position: relative;
+                padding: 20px;
             }
-            .cover-picture > img {
-
-            }
-            .cover-picture > span {
-                position: absolute;
-            }
-            .content {
-                flex: 1;
+            .header {
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
+                justify-content: space-between;
+                align-items: center;
             }
-            .content > img {
-                width: 20px;
-                height: 20px;
+            .header > h2 {
+                margin: 0;
+                padding: 0;
+            }
+            .header > img {
+                height: 40px;
                 border-radius: 50%;
             }
-            .content > p {
-                flex: 1;
-                font-size: 16px;
-
+            .article-img {
+                margin-top: 20px;
             }
-
 
         `}</style>
     </div>
