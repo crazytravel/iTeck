@@ -1,6 +1,7 @@
 const Koa = require('koa')
 const next = require('next')
 const Router = require('koa-router')
+const cors = require('@koa/cors')
 require('./server/db')
 
 const Article = require('./server/routes/article')
@@ -27,12 +28,10 @@ app.prepare().then(() => {
         ctx.respond = false
     })
     server.use(async (ctx, next) => {
-        ctx.set('Access-Control-Allow-Origin', "*.iteck.cc")
-        ctx.set('Access-Control-Allow-Credentials', 'true')
-        ctx.set('Access-Control-Allow-Methods', 'GET,HEAD,PUT,POST,DELETE,PATCH')
         ctx.res.statusCode = 200
         await next()
     })
+    server.use(cors())
     server.use(router.routes())
     server.listen(port, (err) => {
         if (err) throw err
