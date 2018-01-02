@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Start') {
             steps {
-                sh 'npm run-script start'
+                sh 'pm2 start process.config.js --env_production'
             }
         }
     }
