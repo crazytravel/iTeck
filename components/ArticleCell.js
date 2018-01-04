@@ -10,7 +10,6 @@ const ArticleCell = ({image, title, content, date}) => (
         </div>
         <style jsx>{`
             .cell-container {
-                max-width: 800px;
                 height: 150px;
                 background-color: #FFFFFF;
                 display: flex;
