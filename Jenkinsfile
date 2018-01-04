@@ -2,6 +2,12 @@ pipeline {
     agent any
 
     stages {
+        stage('Clean') {
+            steps {
+                sh 'pm2 stop iteck'
+                sh 'pm2 delete iteck'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'yarn'
