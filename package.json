@@ -11,6 +11,7 @@
     "isomorphic-unfetch": "^2.0.0",
     "koa": "^2.4.1",
     "koa-router": "^7.3.0",
+    "mocha": "^4.1.0",
     "mongoose": "^4.13.7",
     "next": "^4.2.1",
     "prop-types": "^15.6.0",
@@ -20,6 +21,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
+    "test": "mocha",
     "start": "NODE_ENV=production node server.js",
     "export": "next export"
   },
