@@ -12,17 +12,34 @@ const Index = ({articles}) => (
     <div>
         <Head title="iTeck"/>
         <MainHeader/>
-        <article>
-            {articles.map((article, index) => (
-                <Link key={index} as={`/article/${article.id}`} href={`/article?id=${article.id}`}>
-                    <a><ArticleCell image={article.image}
-                                    title={article.title}
-                                    content={article.content}
-                                    date={article.date}/></a>
-                </Link>
-            ))}
-        </article>
+        <div className="container">
+            <div className="content">
+                {articles.map((article, index) => (
+                    <Link key={index} as={`/article/${article.id}`} href={`/article?id=${article.id}`}>
+                        <a><ArticleCell image={article.image}
+                                        title={article.title}
+                                        content={article.content}
+                                        date={article.date}/></a>
+                    </Link>
+                ))}
+            </div>
+            <div className="side">
+
+            </div>
+        </div>
         <MainFooter/>
+        <style jsx>{`
+            .container {
+                display: flex;
+                flex-direction: row;
+            }
+            .content {
+                flex: 4;
+            }
+            .side {
+                flex: 1;
+            }
+        `}</style>
     </div>
 )
 

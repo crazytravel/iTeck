@@ -13,6 +13,22 @@ const Head = (props) => (
         <link rel="apple-touch-icon" href="/static/touch-icon.png"/>
         <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882"/>
         <link rel="icon" href="/static/favicon.ico"/>
+        <style global jsx>{`
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #F4F4F4;
+            }
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+            a:visited {
+                color: inherit;
+            }
+        `}</style>
     </NextHead>
 )
 

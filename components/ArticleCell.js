@@ -45,7 +45,7 @@ const ArticleCell = ({image, title, content, date}) => (
     </div>
 )
 
-ArticleCell.PropTypes = {
+ArticleCell.propTypes = {
     image: string,
     title: string,
     content: string,
