@@ -45,6 +45,7 @@ const Index = ({articles}) => (
 
 Index.getInitialProps = async ({req}) => {
     const res = await fetch(API_URL + '/articles')
+
     const data = await res.json()
     return {
         articles: data
