@@ -19,10 +19,10 @@
     "react-dom": "^16.2.0"
   },
   "scripts": {
-    "dev": "node server.js",
+    "dev": "node app.js",
     "build": "next build",
     "test": "mocha",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production node app.js",
     "export": "next export"
   },
   "devDependencies": {

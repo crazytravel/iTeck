@@ -21,8 +21,6 @@ const Article = ({article}) => {
 }
 
 Article.getInitialProps = async ({req, query}) => {
-
-    console.log(API_URL)
     const res = await fetch(API_URL + '/articles/' + query.id)
     const data = await res.json()
     return {
