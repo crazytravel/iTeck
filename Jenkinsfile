@@ -4,8 +4,8 @@ pipeline {
     stages {
         stage('Clean') {
             steps {
-                sh 'pm2 stop iteck'
-                sh 'pm2 delete iteck'
+                sh 'pm2 stop -s iteck'
+                sh 'pm2 delete -s iteck'
             }
         }
         stage('Build') {
