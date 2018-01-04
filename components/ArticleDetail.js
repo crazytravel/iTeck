@@ -1,3 +1,5 @@
+import {string} from 'prop-types'
+
 const ArticleDetail = ({articleImg, avatar, articleTitle, articleContent}) => (
     <div className="container">
         <div className="header">
@@ -37,5 +39,12 @@ const ArticleDetail = ({articleImg, avatar, articleTitle, articleContent}) => (
         `}</style>
     </div>
 )
+
+ArticleDetail.propTypes = {
+    articleImg: string,
+    avatar: string,
+    articleTitle: string,
+    articleContent: string,
+}
 
 export default ArticleDetail

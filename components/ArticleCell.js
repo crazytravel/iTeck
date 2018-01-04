@@ -1,3 +1,4 @@
+import {string, date} from 'prop-types'
 
 const ArticleCell = ({image, title, content, date}) => (
     <div className="cell-container">
@@ -43,5 +44,12 @@ const ArticleCell = ({image, title, content, date}) => (
         `}</style>
     </div>
 )
+
+ArticleCell.PropTypes = {
+    image: string,
+    title: string,
+    content: string,
+    date: string
+}
 
 export default ArticleCell
