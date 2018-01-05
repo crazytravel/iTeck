@@ -5,7 +5,7 @@ const defaultDescription = ''
 const Meta = (props) => (
     <div>
         <Head>
-            <title>{props.title || 'iTeck'}</title>
+            <title>{props.title ? 'iTeck - ' + props.title : 'iTeck'}</title>
             <meta name="description" content={props.description || defaultDescription}/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
             <meta charSet="utf-8"/>

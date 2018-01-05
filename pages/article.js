@@ -9,7 +9,7 @@ const API_URL = process.env.API_URL
 
 const Article = ({article}) => {
     return (
-        <Page title={'iTeck-' + article.title}>
+        <Page title={article.title}>
             <MainHeader/>
             <ArticleDetail articleImg={article.image}
                            avatar={'/static/avatar.jpg'}
