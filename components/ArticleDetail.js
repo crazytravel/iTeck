@@ -24,10 +24,6 @@ const ArticleDetail = ({articleImg, avatar, articleTitle, articleContent}) => (
                 justify-content: space-between;
                 align-items: center;
             }
-            .header > h2 {
-                margin: 0;
-                padding: 0;
-            }
             .header > img {
                 height: 40px;
                 border-radius: 50%;

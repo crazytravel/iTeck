@@ -29,10 +29,6 @@ const ArticleCell = ({image, title, content, date}) => (
                 flex-direction: column;
                 padding: 10px;
             }
-            h3 {
-                margin: 0;
-                padding: 0;
-            }
             p {
                 color: #9B9B9B;
                 font-size: 16px;
