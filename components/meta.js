@@ -1,18 +1,16 @@
-import NextHead from 'next/head'
+import Head from 'next/head'
 import {string} from 'prop-types'
 
 const defaultDescription = ''
-
-const Head = (props) => (
-    <NextHead>
-        <meta charset="UTF-8"/>
-        <title>{props.title || ''}</title>
-        <meta name="description" content={props.description || defaultDescription}/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="icon" sizes="192x192" href="/static/touch-icon.png"/>
-        <link rel="apple-touch-icon" href="/static/touch-icon.png"/>
-        <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882"/>
-        <link rel="icon" href="/static/favicon.ico"/>
+const Meta = (props) => (
+    <div>
+        <Head>
+            <title>{props.title || 'iTeck'}</title>
+            <meta name="description" content={props.description || defaultDescription}/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <meta charSet="utf-8"/>
+            <link rel="icon" href="/static/favicon.ico"/>
+        </Head>
         <style global jsx>{`
             * {
                 box-sizing: border-box;
@@ -30,17 +28,18 @@ const Head = (props) => (
             }
             a {
                 text-decoration: none;
+                color: #000000;
             }
             a:visited {
                 color: #000000;
             }
         `}</style>
-    </NextHead>
+    </div>
 )
 
-Head.propTypes = {
+Meta.propTypes = {
     title: string,
     description: string,
 }
 
-export default Head
+export default Meta

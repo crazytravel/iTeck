@@ -1,16 +1,14 @@
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
-import Head from '../components/Head'
-import MainHeader from '../components/MainHeader'
-import MainFooter from '../components/MainFooter'
-import ArticleCell from '../components/ArticleCell'
+import Page from '../layouts/main'
+import MainHeader from '../components/main-header'
+import ArticleCell from '../components/article-cell'
 
 const API_URL = process.env.API_URL
 
 const Index = ({articles}) => (
-    <div>
-        <Head title="iTeck"/>
+    <Page>
         <MainHeader/>
         <div className="container">
             <div className="content">
@@ -40,7 +38,7 @@ const Index = ({articles}) => (
                 flex: 1;
             }
         `}</style>
-    </div>
+    </Page>
 )
 
 Index.getInitialProps = async ({req}) => {

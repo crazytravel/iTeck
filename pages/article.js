@@ -1,22 +1,21 @@
 import fetch from 'isomorphic-unfetch'
 
-import Head from '../components/Head'
-import MainHeader from '../components/MainHeader'
-import ArticleDetail from '../components/ArticleDetail'
+import Page from '../layouts/main'
+import MainHeader from '../components/main-header'
+import ArticleDetail from '../components/article-detail'
 
 
 const API_URL = process.env.API_URL
 
 const Article = ({article}) => {
     return (
-        <div>
-            <Head title={"iTeck - " + article.title}/>
+        <Page title={'iTeck-' + article.title}>
             <MainHeader/>
             <ArticleDetail articleImg={article.image}
                            avatar={'/static/avatar.jpg'}
                            articleTitle={article.title}
                            articleContent={article.content}/>
-        </div>
+        </Page>
     )
 }
 
