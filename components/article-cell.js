@@ -1,4 +1,4 @@
-import {string, date} from 'prop-types'
+import PropTypes from 'prop-types'
 
 const ArticleCell = ({image, title, content, date}) => (
     <div className="cell-container">
@@ -41,10 +41,10 @@ const ArticleCell = ({image, title, content, date}) => (
 )
 
 ArticleCell.propTypes = {
-    image: string,
-    title: string,
-    content: string,
-    date: string
+    image: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired
 }
 
 export default ArticleCell

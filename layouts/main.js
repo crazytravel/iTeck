@@ -14,3 +14,5 @@ const Page = (props) => (
 Page.propTypes = {
     title: PropTypes.string
 }
+
+export default Page

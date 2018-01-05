@@ -1,4 +1,4 @@
-import {string} from 'prop-types'
+import PropTypes from 'prop-types'
 
 const ArticleDetail = ({articleImg, avatar, articleTitle, articleContent}) => (
     <div className="container">
@@ -37,10 +37,10 @@ const ArticleDetail = ({articleImg, avatar, articleTitle, articleContent}) => (
 )
 
 ArticleDetail.propTypes = {
-    articleImg: string,
-    avatar: string,
-    articleTitle: string,
-    articleContent: string,
+    articleImg: PropTypes.string.isRequired,
+    avatar: PropTypes.string,
+    articleTitle: PropTypes.string.isRequired,
+    articleContent: PropTypes.any.isRequired,
 }
 
 export default ArticleDetail

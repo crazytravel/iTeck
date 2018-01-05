@@ -1,9 +1,10 @@
 import Link from 'next/link'
 
-const MainHeader = (props) => (
+export default () => (
     <div>
         <header>
-            <h1 className="head-title-black"><Link href="/"><a><span className="head-title-red">i</span>Teck</a></Link></h1>
+            <h1 className="head-title-black"><Link href="/"><a><span className="head-title-red">i</span>Teck</a></Link>
+            </h1>
             <div className="avatar"><img src="/static/avatar.jpg"/></div>
         </header>
         <style jsx>{`
@@ -41,5 +42,3 @@ const MainHeader = (props) => (
         `}</style>
     </div>
 )
-
-export default MainHeader

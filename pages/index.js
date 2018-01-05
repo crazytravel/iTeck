@@ -25,7 +25,6 @@ const Index = ({articles}) => (
 
             </div>
         </div>
-        <MainFooter/>
         <style jsx>{`
             .container {
                 display: flex;
