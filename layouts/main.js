@@ -12,7 +12,8 @@ const Page = (props) => (
 )
 
 Page.propTypes = {
-    title: PropTypes.string
+    title: PropTypes.string,
+    children: PropTypes.element.isRequired
 }
 
 export default Page
