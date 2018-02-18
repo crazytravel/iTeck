@@ -2,7 +2,7 @@ module.exports = {
     apps: [{
         name: "iteck",
         script: "./app.js",
-        watch: false,
+        watch: true,
         env: {
             "NODE_ENV": "development",
         },
